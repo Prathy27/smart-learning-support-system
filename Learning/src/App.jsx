@@ -13,7 +13,7 @@ import UnitCards from "./UnitCards";
 import UnitContent from "./UnitContent";
 import QuizPage from "./QuizPage";
 import "./NoNav.css";
-import Dashboard from "./dashboard";
+import Dashboard from "./Dashboard";
 // import ScorePage from "./ScorePage";
 import AdminDashboard from "./AdminDashboard";
 
@@ -56,14 +56,10 @@ const AppRoutes = () => {
         <Route path="/class/:classId/:subject/:unit" element={<UnitContent />} />
         <Route path="/class/:classId/:subject/:unit/quiz" element={<QuizPage />} />
 
-<Route path="/dashboard" element={<Dashboard />} />
+{/* <Route path="/Dashboard" element={<Dashboard />} /> */}
+<Route path="/Dashboard" element={<Dashboard/>}/>
         <Route path="/admin" element={<AdminDashboard/>} />
-{/* <Route
-  path="/scores/:classId/:subject"
-  element={<ScorePage/>}
 
-
-/> */}
 <Route path="/class/:classId/:subject/:unit/quiz" element={<QuizPage />} />
 
       </Routes>
