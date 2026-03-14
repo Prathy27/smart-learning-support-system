@@ -1,0 +1,150 @@
+/* MAIN CONTAINER */
+.contact-container {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+/* TITLE */
+.contact-title {
+  font-size: 40px;
+  font-weight: 700;
+  color: #000;
+}
+
+.contact-subtitle {
+  font-size: 18px;
+  color: #444;
+  margin-top: 10px;
+}
+
+/* FORM BOX */
+.contact-form {
+  margin-top: 40px;
+  width: 40%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.input-group label {
+  font-size: 16px;
+  margin-bottom: 5px;
+  color: #000;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 12px 15px;
+  border-radius: 20px;
+  border: 1px solid #ddd;
+  background: #f3f3f3;
+  font-size: 15px;
+}
+
+/* SUBMIT BUTTON */
+.submit-btn {
+  width: 50%;
+  align-items: center;
+  padding: 12px;
+  background:  #ff6a00;  /* Homepage theme color */
+  border: none;
+  border-radius: 25px;
+  color: white;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.submit-btn:hover {
+  opacity: 0.9;
+  color: black;
+
+}
+
+/* BOTTOM INFO SECTION */
+.info-section {
+  width: 100%;
+  background: #f1f1f1;
+  margin-top: 50px;
+  padding: 40px 0;
+  display: flex;
+  justify-content: center;
+  gap: 80px;
+}
+
+/* Each Info Box */
+.info-box {
+  width: 250px;
+  text-align: center;
+}
+
+/* ICON CIRCLES */
+.icon-circle {
+  width: 70px;
+  height: 70px;
+background:  #ff6a00;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 32px;
+  margin: 0 auto 15px;
+}
+
+/* TITLE & TEXT */
+.info-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.info-text {
+  color: #444;
+  font-size: 15px;
+  line-height: 20px;
+}
+
+/* RESPONSIVE */
+@media(max-width: 900px) {
+  .contact-form {
+    width: 90%;
+  }
+
+  .info-section {
+    flex-direction: column;
+    gap: 30px;
+  }
+}
+.ball {
+    position: fixed;
+    top: 50px;          /* starting vertical position */
+    left: -80px;        /* start slightly off-screen on the left */
+    width: 870px;
+    height: 870px;
+    background: #ff6a00;
+    border-radius: 50%;
+    z-index: -1;
+    pointer-events: none;
+    opacity: 0.85;
+    animation-duration: 5s;
+    animation: diagonalMove 23s linear infinite;
+}
+
+/* Diagonal animation */
+@keyframes diagonalMove {
+    0% {
+        transform: translate(0, 0);
+        position: fixed;
+        top:-90px;          /* start left + top */
+    }
+    50% {
+        transform: translate(20vw, 40vh);   /* move right + down */
+    }
+}

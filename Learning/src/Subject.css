@@ -1,0 +1,121 @@
+.subject-container {
+  --brand-accent: #1a297c;
+  --text-color: #111;
+  --bg-light: #ffffff;
+  --bg-soft: #f7f7f7;
+
+  padding: 50px;
+  background: transparent;
+  color: var(--text-color);
+  animation: fadeSlide 0.8s ease-in-out;
+}
+
+.subject-container h1,
+.subject-container h2 {
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  color: #111;
+  position: relative;
+}
+
+.subject-container h1::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 4px;
+  margin-top: 10px;
+  background: var(--brand-accent);
+  border-radius: 2px;
+}
+
+.subject-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 26px;
+  margin-top: 35px;
+}
+
+/* Layout when using sidebar */
+.class-layout {
+  display: flex;
+  gap: 28px;
+  align-items: flex-start;
+}
+
+.class-content{
+  flex: 1;
+}
+
+.subject-card {
+  position: relative;
+  padding: 30px 20px;
+  background: linear-gradient(
+    145deg,
+    rgba(117, 137, 197, 0.98),
+    rgba(33, 35, 42, 0.96)
+  );
+  border-radius: 18px;
+  text-align: center;
+  font-size: 22px;
+  font-weight: 700;
+  color: #111;
+  cursor: pointer;
+
+  box-shadow:
+    0 10px 25px rgba(0, 0, 0, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.6);
+
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease,
+    color 0.35s ease;
+
+  overflow: hidden;
+}
+
+.subject-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255, 136, 0, 0.15),
+    transparent
+  );
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.subject-card .sub-title {
+  display: block;
+  margin-top: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--brand-accent);
+  letter-spacing: 0.4px;
+}
+
+.subject-card:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow:
+    0 20px 45px rgba(0, 0, 0, 0.16),
+    0 0 0 2px rgba(255, 136, 0, 0.15);
+  color: var(--brand-accent);
+}
+
+.subject-card:hover::before {
+  opacity: 1;
+}
+
+
+@keyframes fadeSlide {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

@@ -1,0 +1,67 @@
+/* NoNav page theme: gradient background, white text, elegant cards */
+:root{
+  --brand-accent: #ff8800;
+  --brand-gradient: linear-gradient(135deg, #ff9900, #ff5e00);
+}
+
+.no-nav-page{
+  min-height: 100vh;
+  width: 100vw;
+  margin: 0;
+  /* background: #ffffff; changed to white per request */
+  color: #111;
+  padding: 40px 24px;
+  box-sizing: border-box;
+}
+
+/* Ensure root elements fill viewport so gradient covers full screen */
+html, body, #root {
+  height: 100%;
+  margin: 0;
+}
+
+/* Use white/cream text on gradient pages */
+.no-nav-page h1,
+.no-nav-page h2,
+.no-nav-page h3 {
+  color: #111 !important; /* headings black */
+}
+
+/* Sub-font / explanatory text accent color */
+.no-nav-page p,
+.no-nav-page .unit-desc,
+.no-nav-page .sub-title {
+  color: #ff8800 !important;
+}
+
+.no-nav-page .subject-card,
+.no-nav-page .unit-card {
+  color: #fff !important;
+}
+
+/* Make inner content centered and readable */
+.no-nav-page .subject-container,
+.no-nav-page .unit-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  background: transparent;
+  padding: 28px;
+  border-radius: 12px;
+}
+
+/* Ensure iframe stands out */
+.no-nav-page iframe{
+  box-shadow: 0 14px 30px rgba(0,0,0,0.12);
+  border-radius: 8px;
+}
+
+/* Cards contrast */
+.no-nav-page .subject-card, .no-nav-page .unit-card{
+  background: #ffffff !important;
+  color: #111 !important;
+  border: 1px solid #eee;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.04);
+}
+
+.no-nav-page .unit-desc{ color: #ff8800 !important; }
+.no-nav-page .unit-title{ color: #111 !important; }
